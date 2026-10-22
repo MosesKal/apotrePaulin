@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Header, Footer } from '@/components/shell';
+import { SiteIntro } from '@/components/site-intro';
 import './globals.css';
 export const metadata: Metadata = {
   title: { default: 'Apôtre Paulin Mambwe | La Parole au cœur de la vie', template: '%s | Paulin Mambwe' },
@@ -10,4 +11,4 @@ export const metadata: Metadata = {
     apple: [{ url: '/favicon.png?v=3', sizes: '1254x1254' }],
   },
 };
-export default function RootLayout({children}:{children:React.ReactNode}) {return <html lang="fr"><body><a className="skip" href="#contenu">Aller au contenu</a><Header/><main id="contenu">{children}</main><Footer/></body></html>}
+export default function RootLayout({children}:{children:React.ReactNode}) {return <html lang="fr"><body><SiteIntro/><a className="skip" href="#contenu">Aller au contenu</a><Header/><main id="contenu">{children}</main><Footer/></body></html>}

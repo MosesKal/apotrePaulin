@@ -26,6 +26,7 @@ npm run typecheck
 - `src/components/shell.tsx` : navigation mobile et pied de page.
 - `src/components/ministry-gallery.tsx` : galerie avec filtres, agrandissement, navigation au clavier et retour du focus.
 - `src/components/icon.tsx` : icônes SVG communes, indépendantes des polices et des symboles du système.
+- `src/components/site-intro.tsx` : introduction de 1,4 seconde au chargement du document ; aucune répétition lors de la navigation interne. Elle se masque avec les animations réduites, s’efface au premier geste et dispose d’une sortie CSS même sans JavaScript.
 - `src/app/globals.css` : styles responsive et couleurs de la charte.
 - `public/images` : portraits et photographies fournis, logo extrait du PDF.
 
