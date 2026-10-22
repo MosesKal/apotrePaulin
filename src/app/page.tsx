@@ -11,13 +11,29 @@ const pathways = [
 export default function Home() {
   return <>
     <section className="hero" aria-labelledby="hero-title">
-      <div className="hero-photo"><Image src="/images/ministry/priere.jpg" alt="L’Apôtre Paulin Mambwe, les bras ouverts pendant une prédication" fill sizes="100vw" priority /></div>
-      <div className="hero-shade" />
+      <div className="hero-photo"><Image src="/images/paulin-mambwe.jpg" alt="Portrait de l’Apôtre Paulin Mambwe" fill sizes="(max-width: 760px) 100vw, 60vw" priority /></div>
+      <div className="hero-shade" aria-hidden="true" />
+      <svg className="hero-bible-mark" viewBox="0 0 420 300" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+        <path d="M210 246C164 222 113 219 45 235V65C114 50 167 59 210 86V246Z" />
+        <path d="M210 246C256 222 307 219 375 235V65C306 50 253 59 210 86V246Z" />
+        <path d="M210 86V246M27 53V250C101 232 160 239 210 266C260 239 319 232 393 250V53" />
+        <path d="M75 102C120 96 157 104 184 119M75 134C120 128 157 136 184 151M75 166C120 160 157 168 184 183" />
+        <path d="M345 102C300 96 263 104 236 119M345 134C300 128 263 136 236 151M345 166C300 160 263 168 236 183" />
+        <path d="M290 176V210M274 191H306" />
+      </svg>
+      <div className="hero-stars" aria-hidden="true">
+        <span className="hero-star hero-star-one" />
+        <span className="hero-star hero-star-two" />
+        <span className="hero-star hero-star-three" />
+        <span className="hero-star hero-star-four" />
+        <span className="hero-star hero-star-five" />
+        <span className="hero-star hero-star-six" />
+      </div>
       <div className="wrap hero-inner">
         <div className="hero-copy">
           <p className="eyebrow light"><span className="accent-line" /> LE MINISTÈRE DE L’APÔTRE PAULIN MAMBWE</p>
-          <h1 id="hero-title">Une Parole vivante.<br/>Une foi <em>qui grandit.</em></h1>
-          <p className="hero-description">Enseigner les Écritures. Former des disciples.<br/>Transmettre la connaissance de Dieu.</p>
+          <h1 id="hero-title">Ancré dans <em>la Bible.</em><br/>Tourné vers Jésus.</h1>
+          <blockquote className="hero-slogan">Sans la croix il n’y a pas de salut,<br/>Et sans la connaissance de Jésus,<br/>il n’y a pas de vie chrétienne prospère<br/>ni même l’entrée au ciel</blockquote>
           <div className="actions"><Link className="button primary" href="/enseignements">Découvrir les enseignements <span aria-hidden>↗</span></Link><a href="#le-ministere" className="hero-secondary"><span className="circle-arrow" aria-hidden>↓</span> Explorer le ministère</a></div>
         </div>
         <div className="hero-bottom"><span>APÔTRE. PASTEUR. AUTEUR. CONFÉRENCIER.</span><a href="#en-images">Le ministère en images <span aria-hidden>↗</span></a></div>
