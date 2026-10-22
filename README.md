@@ -1,6 +1,6 @@
 # Paulin Mambwe — Frontend
 
-Première version locale en Next.js App Router, React et TypeScript.
+Site local en Next.js App Router, React et TypeScript. Refonte photographique du ministère, navigation persistante, galerie filtrable et visionneuse accessible au clavier.
 
 ## Démarrer
 
@@ -24,12 +24,13 @@ npm run typecheck
 - `src/app/page.tsx` : accueil.
 - `src/app/[slug]/page.tsx` : biographie, enseignements, livres, conférences, école, contact.
 - `src/components/shell.tsx` : navigation mobile et pied de page.
+- `src/components/ministry-gallery.tsx` : galerie avec filtres, agrandissement, navigation au clavier et retour du focus.
 - `src/app/globals.css` : styles responsive et couleurs de la charte.
 - `public/images` : portrait fourni et logo extrait du PDF (fond blanc conservé).
 
 Les livres, enseignements et conférences utilisent des états vides explicites en attendant les contenus validés. L’illustration de livre sur l’accueil est décorative et ne représente pas un ouvrage publié. Aucun formulaire ne simule un envoi. Le contact renvoie au site réel de l’église ; aucun backend, suivi utilisateur ou stockage n’est configuré.
 
-Polices : DM Sans et Manrope via Google Fonts avec repli Arial ; Georgia pour les italiques. Les typographies commerciales de la charte ne sont pas embarquées sans leurs fichiers et droits web.
+Polices : DM Sans via Google Fonts avec repli Arial ; Georgia pour les titres. Les typographies commerciales de la charte ne sont pas embarquées sans leurs fichiers et droits web. Les photos fournies sont conservées dans `public/images/ministry` ; les deux images de 206 pixels ne sont pas agrandies.
 
 ## Suite
 
