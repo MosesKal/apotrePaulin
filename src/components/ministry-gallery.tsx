@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { Icon } from "@/components/icon";
 
 const photographs = [
   {
@@ -44,20 +45,6 @@ const photographs = [
 
 const filters = ["Tous", "Enseignement", "Rencontres"] as const;
 type Filter = (typeof filters)[number];
-
-function Chevron({ direction }: { direction: "left" | "right" }) {
-  return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d={direction === "left" ? "m14 6-6 6 6 6" : "m10 6 6 6-6 6"}
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 export function MinistryGallery() {
   const [filter, setFilter] = useState<Filter>("Tous");
@@ -134,9 +121,7 @@ export function MinistryGallery() {
                 sizes="(max-width: 600px) 90vw, (max-width: 900px) 45vw, 30vw"
               />
               <span className="gallery-expand" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M8 5H5v3m11-3h3v3M5 16v3h3m11-3v3h-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                </svg>
+                <Icon name="expand" />
               </span>
             </span>
             <span className="gallery-caption">
@@ -169,12 +154,10 @@ export function MinistryGallery() {
         {selectedPhoto && (
           <div className="gallery-dialog-inner">
             <button type="button" className="gallery-close" aria-label="Fermer la photographie" onClick={() => setSelectedId(null)} autoFocus>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-              </svg>
+              <Icon name="close" />
             </button>
             <button type="button" className="gallery-prev" aria-label="Photographie précédente" onClick={() => navigate(-1)}>
-              <Chevron direction="left" />
+              <Icon name="chevron-left" />
             </button>
             <figure>
               <Image
@@ -191,7 +174,7 @@ export function MinistryGallery() {
               </figcaption>
             </figure>
             <button type="button" className="gallery-next" aria-label="Photographie suivante" onClick={() => navigate(1)}>
-              <Chevron direction="right" />
+              <Icon name="chevron-right" />
             </button>
           </div>
         )}
